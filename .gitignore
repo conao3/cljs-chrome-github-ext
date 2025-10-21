@@ -4,3 +4,5 @@
 /node_modules
 /resources/public/js
 /dev-resources/public/js
+/.clj-kondo
+/.lsp
