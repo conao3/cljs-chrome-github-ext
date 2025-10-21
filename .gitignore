@@ -1,4 +1,6 @@
-result
-.cpcache
-.shadow-cljs
-node_modules
+/result
+/.cpcache
+/.shadow-cljs
+/node_modules
+/resources/public/js
+/dev-resources/public/js

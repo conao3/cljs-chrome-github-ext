@@ -1,0 +1,10 @@
+{:deps true
+ :builds
+ {:app
+  {:target :browser
+   :output-dir "resources/public/js"
+   :modules
+   {:content
+    {:init-fn cljs-chrome-github-ext.content/init}
+    :background
+    {:init-fn cljs-chrome-github-ext.background/init}}}}}
