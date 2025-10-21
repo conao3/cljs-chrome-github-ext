@@ -2,7 +2,7 @@
 /.cpcache
 /.shadow-cljs
 /node_modules
-/resources/public/js
-/dev-resources/public/js
+/resources/public/dist/js
+/resources-dev/public/dist/js
 /.clj-kondo
 /.lsp
