@@ -1,4 +1,4 @@
-{:deps true
+{:deps {:aliases [:dev]}
  :dev-http {8000 {:roots ["resources-dev/public" "resources/public"]}}
  :nrepl {:init-ns user}
  :builds
