@@ -10,18 +10,11 @@ watch:
 compile:
 	clojure -T:build compile-cljs
 
-.PHONY: build
-build:
-	pnpm exec shadow-cljs release app
-
-.PHONY: package
-package:
-	clojure -T:build package
-
 .PHONY: release
 release:
 	clojure -T:build release
 
 .PHONY: clean
 clean:
+	rm -rf dev-resources/public/dist
 	clojure -T:build clean
