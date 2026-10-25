@@ -9,6 +9,9 @@
   (b/delete {:path "resources/public/dist"})
   (b/delete {:path ".shadow-cljs"}))
 
+(defn compile-cljs [_]
+  (b/process {:command-args ["pnpm" "exec" "shadow-cljs" "compile" "app"]}))
+
 (defn release-cljs [_]
   (b/process {:command-args ["pnpm" "exec" "shadow-cljs" "release" "app"]}))
 
