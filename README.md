@@ -16,9 +16,9 @@ This project provides a foundation for building Chrome extensions that enhance t
 
 ## Requirements
 
-- Node.js 22 or later
-- pnpm 10.18.3 or later
-- Java JDK 21 (for Clojure)
+- Node.js 26 or later
+- pnpm 12.9.0 or later
+- Java JDK 25 (for Clojure)
 - Clojure CLI tools
 
 Alternatively, use the included Nix flake for a reproducible development environment:
