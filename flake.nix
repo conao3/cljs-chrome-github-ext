@@ -15,34 +15,21 @@
         inputs.treefmt-nix.flakeModule
       ];
 
-      perSystem = {
-        pkgs,
-        system,
-        ...
-      }: let
-        overlay = final: prev: let
-          jdk = prev.jdk25;
-          nodejs = prev.nodejs_latest;
-          clojure = prev.clojure.override {inherit jdk;};
-          pnpm = prev.pnpm;
-        in {
-          inherit jdk nodejs clojure pnpm;
-        };
-        pkgs = import inputs.nixpkgs {
-          inherit system;
-          overlays = [overlay];
-        };
+      perSystem = {pkgs, ...}: let
+        jdk = pkgs.jdk25;
+        nodejs = pkgs.nodejs_26;
+        clojure = pkgs.clojure.override {inherit jdk;};
       in {
         treefmt = {
           programs.alejandra.enable = true;
         };
 
         devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
+          packages = [
             jdk
             clojure
             nodejs
-            pnpm
+            pkgs.pnpm
           ];
         };
       };
