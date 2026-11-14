@@ -12,7 +12,7 @@
     "pnpm": ">=12.9.0"
   },
   "devDependencies": {
-    "shadow-cljs": "^3.5.11"
+    "shadow-cljs": "^3.5.13"
   },
   "dependencies": {
     "react": "^19.3.1",
